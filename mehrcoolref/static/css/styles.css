@@ -2,48 +2,106 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
+    background-color: #59619b;  /*Background color */
+    
 }
 
-.navbar {
+.navbar-1 {
     display: flex;
     flex-wrap: wrap; /* Allows wrapping in small screens */
-    background-color: #1e2452;
     padding: 20px;
     justify-content: left; /* Distribute space between items */
+    background-color: #1e2452;  /*Background color */
+    background-image: url("{% static 'images/home/image.jpg' %}"); /* Background image */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire navbar */
 }
 
-.nav-item {
+.navbar-1 .nav-item {
     display: flex;
     align-items: center;
     margin-right: 0px; /* Default spacing between items */
 }
 
-.nav-icon {
+.navbar-1 .nav-icon {
     width: 30px; /* Adjust width as needed ___ Icon Size For NavICon */
     height: 30px; /* Adjust height as needed */
     margin-right: 10px;
 }
 
-.nav-text {
+.navbar-1 .nav-text {
     color: #fff;
     text-decoration: none;
 }
 
 /* Custom positioning for each nav item */
-.no1-item {
+.navbar-1 .no1-item {
     order: 1; /* Change the order of Contact item */
     margin-left: 20%; /* Increase space for Home item */
+    
 }
 
-.no2-item {
+.navbar-1 .no2-item {
     order: 2; /* Change the order of Contact item */
     margin-left: 15%; /* Adjust position for About item */
 }
 
-.no3-item {
+.navbar-1 .no3-item {
     order: 3; /* Change the order of Contact item */
     margin-left: 10px;
 }
+/*--------------------------------------------------------------------Navbar_2**************************/
+.navbar-2 {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping in small screens */
+    padding: 100px;
+    justify-content: left; /* Distribute space between items */
+    background-color: #d3d3d5;  /*Background color */
+    background-image: url("{% static 'images/home/swan.jpg' %}"); /* Background image */
+    background-size: cover; /* Adjusts the size of the background image to cover the entire navbar */
+}
+
+.navbar-2 .nav-item {
+    display: flex;
+    align-items: center;
+    margin-right: 0px; /* Default spacing between items */
+}
+
+.nav-logo {
+    width: 200px;  /* Set the desired width */
+    height: auto;
+}
+
+.navbar-2 .nav-icon {
+    
+    width: 60px; /* Adjust width as needed ___ Icon Size For NavICon */
+    height: auto; /* Adjust height as needed */
+}
+
+.navbar-2 .nav-text {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* Custom positioning for each nav item */
+.navbar-2 .no1-item {
+    order: 1; /* Change the order of Contact item */
+    margin-left: 5%; /* Increase space for Home item */
+    width: 30px; /* Adjust width as needed ___ Icon Size For NavICon */
+    height: 30px; /* Adjust height as needed */
+}
+
+.navbar-2 .no2-item {
+    order: 2; /* Change the order of Contact item */
+    margin-left: 30%; /* Adjust position for About item */
+}
+
+.navbar-2 .no3-item {
+    order: 3; /* Change the order of Contact item */
+    margin-left: 100px;
+}
+
+
+
 
 
 
@@ -51,61 +109,11 @@ body {
 
 @media (max-width: 768px) {
 
-    
-    body {
-        margin: 0;
-        font-family: Arial, sans-serif;
-    }
-    
-    .navbar {
-        display: flex;
-        flex-wrap: wrap; /* Allows wrapping in small screens */
-        background-color: #524d1e;
-        padding: 20px;
-        justify-content: left; /* Distribute space between items */
-    }
-    
-    .nav-item {
-        display: flex;
-        align-items: center;
-        margin-left: 100px; /* Default spacing between items */
-    }
-    
-    .nav-icon {
-        width: 10px; /* Adjust width as needed ___ Icon Size For NavICon */
-        height: 10px; /* Adjust height as needed */
-        margin-left: 0px;
-    }
-    
-    .nav-text {
-        color: #fff;
-        text-decoration: none;
-        font-size: 12px !important;
-    }
-    
-    /* Custom positioning for each nav item */
-    .no1-item {
-        margin-left: 0%; /* Increase space for Home item */
-    }
-    
-    .no2-item {
-        margin-left: 0%; /* Adjust position for About item */
-    }
-    
-    .no3-item {
-        order: 3; /* Change the order of Contact item */
-        margin-left: 0px;
-    }
+  
 }
 
 /* Responsive adjustments For Tablet *******************************************************************************************/
 
 @media (min-width: 769px) and (max-width: 1024px) {
-    .navbar {
-        flex-direction: row;
-        /*justify-content: flex-start;  Align items from the start */
-    }
-    .nav-item {
-        margin-right: 150px; /* Adjust margin for tablet view */
-    }
+    
 }
