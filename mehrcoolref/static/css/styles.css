@@ -1,0 +1,111 @@
+/* static/css/styles.css */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping in small screens */
+    background-color: #1e2452;
+    padding: 20px;
+    justify-content: left; /* Distribute space between items */
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    margin-right: 0px; /* Default spacing between items */
+}
+
+.nav-icon {
+    width: 30px; /* Adjust width as needed ___ Icon Size For NavICon */
+    height: 30px; /* Adjust height as needed */
+    margin-right: 10px;
+}
+
+.nav-text {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Custom positioning for each nav item */
+.no1-item {
+    order: 1; /* Change the order of Contact item */
+    margin-left: 20%; /* Increase space for Home item */
+}
+
+.no2-item {
+    order: 2; /* Change the order of Contact item */
+    margin-left: 15%; /* Adjust position for About item */
+}
+
+.no3-item {
+    order: 3; /* Change the order of Contact item */
+    margin-left: 10px;
+}
+
+
+
+/* Responsive adjustments For Mobile *******************************************************************************************/
+
+@media (max-width: 768px) {
+
+    
+    body {
+        margin: 0;
+        font-family: Arial, sans-serif;
+    }
+    
+    .navbar {
+        display: flex;
+        flex-wrap: wrap; /* Allows wrapping in small screens */
+        background-color: #524d1e;
+        padding: 20px;
+        justify-content: left; /* Distribute space between items */
+    }
+    
+    .nav-item {
+        display: flex;
+        align-items: center;
+        margin-left: 100px; /* Default spacing between items */
+    }
+    
+    .nav-icon {
+        width: 10px; /* Adjust width as needed ___ Icon Size For NavICon */
+        height: 10px; /* Adjust height as needed */
+        margin-left: 0px;
+    }
+    
+    .nav-text {
+        color: #fff;
+        text-decoration: none;
+        font-size: 12px !important;
+    }
+    
+    /* Custom positioning for each nav item */
+    .no1-item {
+        margin-left: 0%; /* Increase space for Home item */
+    }
+    
+    .no2-item {
+        margin-left: 0%; /* Adjust position for About item */
+    }
+    
+    .no3-item {
+        order: 3; /* Change the order of Contact item */
+        margin-left: 0px;
+    }
+}
+
+/* Responsive adjustments For Tablet *******************************************************************************************/
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .navbar {
+        flex-direction: row;
+        /*justify-content: flex-start;  Align items from the start */
+    }
+    .nav-item {
+        margin-right: 150px; /* Adjust margin for tablet view */
+    }
+}
