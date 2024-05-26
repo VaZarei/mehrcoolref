@@ -1,8 +1,16 @@
 from django.shortcuts import render
-from django.views.generic import TemplateView
+
 
 # Create your views here.
 
+from django.shortcuts import render
+from django.views import View
+import os
 
-class HomeTemplateView(TemplateView):
-    template_name = "home/home.html"
+class HomeView(View):
+    def get(self, request):
+        image_dir = os.path.join('static', 'images', 'home')  # Adjust the path as needed
+        images = os.listdir(image_dir)
+        image_paths = [os.path.join('images', 'home', img) for img in images if img.endswith(('jpg', 'jpeg', 'png', 'gif'))]
+        context = {'image_paths': image_paths}
+        return render(request, 'home/home.html', context)

@@ -6,26 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Django Site</title>
     {% load static %}
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="{% static 'css/base/basestyles.css' %}">
+    {% block extra_head %}{% endblock extra_head %}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="navbar-1">
         <div class="nav-item no1-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/24hours.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/base/24hours.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Best Services in the great London</span>
         </div>
         <div class="nav-item no2-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/schedule.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/base/schedule.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Schedule a Service</span>
         </div>
         <div class="nav-item no3-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/qoute.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/base/qoute.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Request a Quote</span>
         </div>
@@ -33,20 +34,21 @@
 
     <div class="container">
         <div class="column column-1">
-            <img class="logo" src="{% static 'images/home/logo.png' %}" alt="Logo">
+            <img class="logo" src="{% static 'images/base/logo.png' %}" alt="Logo">
         </div>
 
         <div class="column column-2">
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/tick.svg' %}" alt="Image 1">
+                <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 1">
                 <p class="line"><strong>Repair, Install, Maintain: Your Total AC & Refrigeration Solution</strong></p>
+                
             </div>
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/tick.svg' %}" alt="Image 2">
+                <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 2">
                 <p class="line"><strong>Cool Comfort Guaranteed: AC & Refrigeration Experts</strong></p>
             </div>
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/tick.svg' %}" alt="Image 3">
+                <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 3">
                 <p class="line"><strong>Keep It Fresh or Cool: We Fix, Install & Maintain Your AC & Refrigeration</strong></p>
             </div>
         </div>
@@ -54,7 +56,7 @@
         <div class="column column-3">
 
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/location.svg' %}" alt="Image 1">
+                <img class="line-image" src="{% static 'images/base/location.svg' %}" alt="Image 1">
                 <div class="line-text">
                     <p class="line"><strong>London, UK</strong></p>
                     <p class="line">Great London</p>
@@ -62,7 +64,7 @@
             </div>
 
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/mail.svg' %}" alt="Image 2">
+                <img class="line-image" src="{% static 'images/base/mail.svg' %}" alt="Image 2">
                 <div class="line-text">
                     <p class="line"><strong>Mail Us On</strong></p>
                     <p class="line">Mehrcool@mehrcool.co.uk</p>
@@ -70,7 +72,7 @@
             </div>
 
             <div class="line-container">
-                <img class="line-image" src="{% static 'images/home/24hours.svg' %}" alt="Image 2">
+                <img class="line-image" src="{% static 'images/base/24hours.svg' %}" alt="Image 2">
                 <div class="line-text">
                     <p class="line"><strong>Emergency Call</strong></p>
                     <p class="line">077123456789</p>
@@ -80,9 +82,30 @@
         </div>
 
         <div class="column column-4">
-            <img class="rlogo" src="{% static 'images/home/airconwoman.jpg' %}" alt="rLogo">
+            <img class="rlogo" src="{% static 'images/base/airconwoman.jpg' %}" alt="rLogo">
         </div>
     </div>
+
+
+    {% comment %} menu *********************************************************{% endcomment %}
+
+    <nav class="navbar">
+        <div class="navbar-container">
+            
+            <button class="navbar-toggler" onclick="toggleMenu()">☰</button>
+            <div class="navbar-menu" id="navbarMenu">
+                <a href="#" class="navbar-item">Home</a>
+                <a href="#" class="navbar-item">About Us</a>
+                <a href="#" class="navbar-item">Commercial Refrigeration</a>
+                <a href="#" class="navbar-item">Air Conditioning</a>
+                <a href="#" class="navbar-item">Cold Rooms</a>
+                <a href="#" class="navbar-item">Other Our Services</a>
+                <a href="#" class="navbar-item">Our Projects</a>
+            </div>
+        </div>
+    </nav>
+
+    {% comment %} menu *********************************************************{% endcomment %}
 
     {% block content %}
     

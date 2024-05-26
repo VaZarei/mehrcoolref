@@ -1,22 +1,51 @@
 {% extends "base.html" %}
+{% load static %}
 
-
-
+{% block extra_head %}
+<link rel="stylesheet" href="{% static 'css/home/homestyles.css' %}">
+{% endblock extra_head %}
 
 {% block content %}
-
-
-
-
-
-
-
-
-
-
-
+<div class="slideshow-container">
+    {% for image_path in image_paths %}
+        <div class="slide fade">
+            <img src="{% static image_path %}" alt="Slide {{ forloop.counter }}">
+        </div>
+    {% endfor %}
     
+    <!-- Pagination -->
+    <div class="pagination">
+        {% for image_path in image_paths %}
+            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+        {% endfor %}
+    </div>
+</div>
 
 
 
+
+
+<script src="{% static 'js/home/homescript.js' %}"></script>
+
+
+<div class="container">
+    <div class="column column-1">
+        <img class="logo" src="{% static 'images/base/logo.png' %}" alt="Logo">
+    </div>
+
+    <div class="column column-2">
+        <div class="line-container">
+            <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 1">
+            <p class="line"><strong>Repair, Install, Maintain: Your Total AC & Refrigeration Solution</strong></p>
+            
+        </div>
+        <div class="line-container">
+            <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 2">
+            <p class="line"><strong>Cool Comfort Guaranteed: AC & Refrigeration Experts</strong></p>
+        </div>
+        <div class="line-container">
+            <img class="line-image" src="{% static 'images/base/tick.svg' %}" alt="Image 3">
+            <p class="line"><strong>Keep It Fresh or Cool: We Fix, Install & Maintain Your AC & Refrigeration</strong></p>
+        </div>
+    </div>
 {% endblock content %}

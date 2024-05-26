@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif ;
-    background-color: #59619b; /* Background color */
+    background-color: #31418c; /* Background color */
     padding: 0;
 }
 
@@ -10,15 +10,17 @@ body {
     flex-wrap: wrap;
     padding: 20px;
     justify-content: left;
-    background-color: #1e2452;
-    background-image: url("{% static 'images/home/image.jpg' %}");
+    background-color: #051456;
+    background-image: url("{% static 'images/base/image.jpg' %}");
     background-size: cover;
+    
 }
 
 .navbar-1 .nav-item {
     display: flex;
     align-items: center;
     margin-right: 0px;
+    
 }
 
 .navbar-1 .nav-icon {
@@ -28,13 +30,14 @@ body {
 }
 
 .navbar-1 .nav-text {
-    color: #fff;
+    color: #ffffff;
     text-decoration: none;
 }
 
 .navbar-1 .no1-item {
     order: 1;
     margin-left: 20%;
+    
 }
 
 .navbar-1 .no2-item {
@@ -81,13 +84,15 @@ body {
     padding: 10px;             /* Distance From the Cail ... */
     color: rgb(0, 0, 0);
     box-sizing: border-box; /* Ensure padding and border are included in the width */
+    
 }
 
 .column-1 {
     width: 20%;
-    background-color: #d3d3d5;
+    background-color: #d0d0e2;
     height: 240px;
     text-align: center;
+    
 }
 
 .logo {
@@ -98,7 +103,7 @@ body {
 
 .column-2 {
     width: 35%;
-    background-color: #d3d3d5;
+    background-color: #d0d0e2;
     height: 240px;
     display: flex;
     flex-direction: column;
@@ -127,7 +132,7 @@ body {
 
 .column-3 {
     width: 20%;
-    background-color: #d3d3d5;
+    background-color: #d0d0e2;
     height: 240px;
     display: flex;
     flex-direction: column;
@@ -161,7 +166,7 @@ body {
 
 .column-4 {
     width: 25%;
-    background-color: #d3d3d5;
+    background-color: #d0d0e2;
     height: 240px;
     text-align: center;
 }
@@ -181,5 +186,80 @@ body {
 
     .column {
         width: 100%; /* Make columns full-width on small screens */
+    }
+}
+
+
+/***************************************************** Menu **********************/
+
+/* static/css/base/basestyles.css */
+
+
+.navbar {
+    background-color: #ffffff;
+    overflow: hidden;
+    
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 500px;
+}
+
+.navbar-brand {
+    color: #000000;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+.navbar-toggler {
+    display: none;
+    font-size: 1.5em;
+    color: #000000;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.navbar-menu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.navbar-item {
+    color: #000000;
+    padding: 10px 15px;
+    text-decoration: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.navbar-item:hover {
+    background-color: #f39b1f;
+    color: #000000;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .navbar-menu {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .navbar-menu.active {
+        display: flex;
+    }
+
+    .navbar-item {
+        text-align: center;
+        padding: 15px;
+        width: 100%;
+    }
+
+    .navbar-toggler {
+        display: block;
     }
 }
