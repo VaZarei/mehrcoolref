@@ -78,7 +78,7 @@ body {
 }
 
 .column {
-    padding: 20px;
+    padding: 10px;             /* Distance From the Cail ... */
     color: rgb(0, 0, 0);
     box-sizing: border-box; /* Ensure padding and border are included in the width */
 }
@@ -91,7 +91,7 @@ body {
 }
 
 .logo {
-    width: 65%;
+    width: 60%;
     height: auto;
     
 }
@@ -163,13 +163,15 @@ body {
     width: 25%;
     background-color: #d3d3d5;
     height: 240px;
-    text-align: left;
+    text-align: center;
 }
-.Rlogo {
-    width: 85%;
+
+.rlogo {
+    width: 75%;
     height: auto;
     
 }
+
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
