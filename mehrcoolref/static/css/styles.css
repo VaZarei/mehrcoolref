@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif ;
     background-color: #59619b; /* Background color */
     padding: 0;
 }
@@ -167,7 +167,7 @@ body {
 }
 
 .rlogo {
-    width: 75%;
+    width: 85%;
     height: auto;
     
 }

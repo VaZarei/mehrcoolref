@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -12,19 +13,19 @@
     <div class="navbar-1">
         <div class="nav-item no1-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/clock_4.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/home/24hours.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Best Services in the great London</span>
         </div>
         <div class="nav-item no2-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/clock_4.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/home/schedule.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Schedule a Service</span>
         </div>
         <div class="nav-item no3-item">
             <a href="">
-                <img class="nav-icon" src="{% static 'images/home/clock_4.svg' %}" alt="Alarm Clock">
+                <img class="nav-icon" src="{% static 'images/home/qoute.svg' %}" alt="Alarm Clock">
             </a>
             <span class="nav-text">Request a Quote</span>
         </div>
@@ -51,6 +52,7 @@
         </div>
 
         <div class="column column-3">
+
             <div class="line-container">
                 <img class="line-image" src="{% static 'images/home/location.svg' %}" alt="Image 1">
                 <div class="line-text">
@@ -58,6 +60,7 @@
                     <p class="line">Great London</p>
                 </div>
             </div>
+
             <div class="line-container">
                 <img class="line-image" src="{% static 'images/home/mail.svg' %}" alt="Image 2">
                 <div class="line-text">
@@ -65,14 +68,26 @@
                     <p class="line">Mehrcool@mehrcool.co.uk</p>
                 </div>
             </div>
+
+            <div class="line-container">
+                <img class="line-image" src="{% static 'images/home/24hours.svg' %}" alt="Image 2">
+                <div class="line-text">
+                    <p class="line"><strong>Emergency Call</strong></p>
+                    <p class="line">077123456789</p>
+                </div>
+            </div>
             
         </div>
 
         <div class="column column-4">
-            <img class="rlogo" src="{% static 'images/home/swan.jpg' %}" alt="rLogo">
+            <img class="rlogo" src="{% static 'images/home/airconwoman.jpg' %}" alt="rLogo">
         </div>
     </div>
 
-    {% block content %}{% endblock %}
+    {% block content %}
+    
+    
+    
+    {% endblock %}
 </body>
 </html>
