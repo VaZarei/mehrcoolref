@@ -14,7 +14,7 @@ html, body {
     flex-wrap: wrap;
     padding: 20px;
     justify-content: left;
-    background-color: #1c214c;
+    background-color: #ffffff;
     background-image: url("static/images/base/ice.jpg");
     background-size: cover;
 }
@@ -32,7 +32,7 @@ html, body {
 }
 
 .navbar-1 .nav-text {
-    color: #f6f6f6;
+    color: #000000;
     text-decoration: none;
     font-size: 1.0em;
 }

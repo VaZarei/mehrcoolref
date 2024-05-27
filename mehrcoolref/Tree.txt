@@ -1,3 +1,5 @@
+this is my files trees stocking to make my site
+
 static/css/base/basestyles.css
 static/css/home/homestyles.css
 

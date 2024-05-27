@@ -93,3 +93,72 @@ body, html {
         width: 10px;
     }
 }
+
+
+/************************************************** 3 Column below Slideshow ********************** / 
+
+/* General reset and box-sizing for consistent layout */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+}
+
+
+.container_2 {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    width: 100%;
+    max-width: 1200px;
+    padding: 20px;
+}
+
+.column {
+    flex: 1;
+    margin: 10px;
+    padding: 20px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Custom styles for individual columns */
+#column1 {
+    background-color: #ffdddd; /* Example color */
+    /* You can add background images like this */
+    /* background-image: url('path/to/image.jpg'); */
+    /* Example of item alignment inside the column */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#column2 {
+    background-color: #ddffdd; /* Example color */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+#column3 {
+    background-color: #ddddff; /* Example color */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
