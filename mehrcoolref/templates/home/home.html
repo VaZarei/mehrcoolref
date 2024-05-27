@@ -6,32 +6,96 @@
 {% endblock extra_head %}
 
 {% block content %}
-<div class="slideshow-container">
-    {% for image_path in image_paths %}
-        <div class="slide fade">
-            <img src="{% static image_path %}" alt="Slide {{ forloop.counter }}">
-        </div>
-    {% endfor %}
-    
-    <!-- Pagination -->
-    <div class="pagination">
+
+
+<div class="container">
+    <div class="slideshow-container">
         {% for image_path in image_paths %}
-            <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+            <div class="slide fade">
+                <img src="{% static image_path %}" alt="Slide {{ forloop.counter }}">
+            </div>
         {% endfor %}
+        
+        <!-- Pagination -->
+        <div class="pagination">
+            {% for image_path in image_paths %}
+                <span class="dot" onclick="currentSlide({{ forloop.counter }})"></span>
+            {% endfor %}
+        </div>
+    </div>
+
+
+    <div class="article-container">
+        <div class="article-image">
+            <img src="static/images/home/logo.png" alt="Sample Image">
+        </div>
+        <div class="article-content">
+            <h1 class="article-title">Who we are?</h1>
+            <p class="article-text">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula
+                faucibus lacus, et dignissim eros. Integer ut ligula sit amet tortor ullamcorper
+                venenatis. Donec sit amet facilisis urna. Fusce nec tortor lectus. Phasellus
+                vitae elit ut libero cursus vehicula. Sed ut mauris vel lorem posuere euismod.
+                Proin sit amet consequat orci, at pulvinar nulla.
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque vehicula
+                faucibus lacus, et dignissim eros. Integer ut ligula sit amet tortor ullamcorper
+                venenatis. Donec sit amet facilisis urna. Fusce nec tortor lectus. Phasellus
+                
+            </p>
+        </div>
     </div>
 </div>
 
-<div class="container_2">
-    <div class="column column-1">
-        <a href="{% url "HomeView_url" %}">
-        <img class="llogo" src="{% static 'images/base/logo.png' %}" alt="lLogo"></a>
+
+<div class="container_skills">
+    <div class="floor1">
+        <div class="left-column">
+            <img src="static/images/home/Mitso_mehrcool.jpg" alt="Image 1">
+        </div>
+        <div class="center-column">
+            <h2>Air Conditioning</h2>
+            <p><br>Energy Efficient Air Conditioning Equipment We can create a perfect working and living environment for customers across London</p>
+        </div>
+        <div class="right-column">
+            <a href="#"><br>Read More</a>
+        </div>
     </div>
-    <div class="column" id="column2">
-        <p> Column 2</p>
+    <div class="divider"></div>
+</div>
+
+<div class="container_skills">
+    <div class="floor1">
+        <div class="left-column">
+            <img src="static/images/home/Cold-Room.jpg" alt="Image 1">
+        </div>
+        <div class="center-column">
+            <h2>Cold Rooms</h2>
+            <p><br>Our technicians are trained to service, repair, and install all types of refrigeration equipment.We provide Installation, maintenance and many repair services for Cold Rooms</p>
+        </div>
+        <div class="right-column">
+            <a href="#"><br>Read More</a>
+        </div>
     </div>
-    <div class="column" id="column3">
-        <p> Column 3</p>
+    <div class="divider"></div>
+</div>
+
+<div class="container_skills">
+    <div class="floor1">
+        <div class="left-column">
+            <img src="static/images/home/Slush-Machine.jpg" alt="Image 1">
+        </div>
+        <div class="center-column">
+            <h2>Slush Machines,
+                Ice Machines, …</h2>
+            <p><br>There are many different makes and models of machine out there and the good news is that we service over 90% of them.
+
+            </p>
+        </div>
+        <div class="right-column">
+            <a href="#"><br>Read More</a>
+        </div>
     </div>
+    <div class="divider"></div>
 </div>
 
 

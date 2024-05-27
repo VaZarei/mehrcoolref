@@ -1,22 +1,46 @@
 /* static/css/home/homestyles.css */
 
-body, html {
+
+
+.container {
+    display: flex;
+    gap: 20px; /* Space between items */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
     margin: 0;
-    padding: 0;
-    height: 100%;
-    overflow: auto; /* Allow scrolling */
-    background-color: #ffffff; /* Set background color */
+    background-color: #ffffff;
+}
+
+.item {
+    flex: 1;
+    background-color: #4CAF50;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 600px; /* Set a fixed height */
+    border-radius: 8px;
 }
 
 .slideshow-container {
-    position: relative;
-    width: 80%; /* Adjust width to 80% */
-    height: 80vh; /* Set height as needed */
+    position:relative;
+    width: 50%; /* Adjust width to 80% */
+    float: right;
+    
+    
+    
+    height:500px ; /* Set height as needed 50vh  */
     overflow: hidden;
-    background-color: #ffffff;
-    border-radius: 60px; /* Rounded corners */
-    box-shadow: 0 4px 8px rgba(39, 39, 39, 0.1); /* Optional: add a subtle shadow */
-    margin: auto; /* Center the slideshow container horizontally */
+    background-color: #8da8c4;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 0px 0px #ffffff; /* Optional: add a subtle shadow */
+    /*margin: auto; /* Center the slideshow container horizontally */
+    float: right;
+    
 }
 
 .slide {
@@ -24,23 +48,24 @@ body, html {
     width: 100%;
     height: 100%;
     position: absolute;
-    border-radius: 0px;
+    
 }
 
 .slide img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 40px; /* Apply rounded corners to images */
+    object-fit: scale-down;
+    border-radius: 30px; /* Apply rounded corners to images */
+    padding: 10px;
 }
 
 .fade {
-    animation: fadeEffect 10.5s ease-in-out;
+    animation: fadeEffect 0.0s ease-in-out;
 }
 
 @keyframes fadeEffect {
-    from { opacity: 0.4; }
-    to { opacity: 1; }
+    from { opacity: 0.0; }
+    to { opacity: 0.0; }
 }
 
 .pagination {
@@ -55,14 +80,14 @@ body, html {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #ffffff;
+    /*background-color: #c8c8c8;*/
     border-radius: 50%;
     display: inline-block;
-    transition: background-color 0.6s ease;
+    transition: background-color 0.0s ease;
 }
 
 .active, .dot:hover {
-    background-color: #ffffff;
+    background-color: #8e8e8e;
 }
 
 /* Responsive adjustments */
@@ -95,70 +120,132 @@ body, html {
 }
 
 
-/************************************************** 3 Column below Slideshow ********************** / 
+/************************************************************ article1 *************************************************/
 
-/* General reset and box-sizing for consistent layout */
+
+/* Article container styling */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body, html {
-    height: 100%;
-}
 
 
-.container_2 {
+/* Article container styling */
+.article-container {
     display: flex;
-    justify-content: center;
-    align-items: stretch;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
+    flex-direction: row;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    max-width: 800px;
+    overflow: hidden;
+    box-shadow: 0 0 0px #ffffff;
+    width: 50%;
+    height: 500px;
+    float: left;
+    
+    
+    
 }
 
-.column {
+/* Article image styling */
+.article-image {
     flex: 1;
-    margin: 10px;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
+/* Article content styling */
+.article-content {
+    flex: 2;
     padding: 20px;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+.article-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-text {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
-    .container {
+@media (max-width: 1024px) {
+    .article-container {
         flex-direction: column;
+    }
+
+    .article-image, .article-content {
+        width: 100%;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
     }
 }
 
-/* Custom styles for individual columns */
-#column1 {
-    background-color: #ffdddd; /* Example color */
-    /* You can add background images like this */
-    /* background-image: url('path/to/image.jpg'); */
-    /* Example of item alignment inside the column */
+/*********************************************************************introduction skills****************************/
+
+
+.container_skills {
+    width: 70%;
+    height: 400px;
+    font-family: Arial, sans-serif;
     display: flex;
-    flex-direction: column;
     justify-content: center;
+    align-items: left;
+    
+    margin: auto;
+    background-color: #ffffff;
+    
+}
+
+.floor1 {
+    display: flex;
+    justify-content: space-between;
     align-items: center;
+    padding: 50px 0;
 }
 
-#column2 {
-    background-color: #ddffdd; /* Example color */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
+.left-column, .center-column, .right-column {
+    flex: 1;
+    text-align: left;
 }
 
-#column3 {
-    background-color: #ddddff; /* Example color */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    align-items: flex-end;
+.left-column img {
+    max-width: 80%;
+    height: auto;
+}
+
+.center-column {
+    flex: 1;
+    text-align: left;
+}
+
+.right-column {
+    text-decoration:solid;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divider {
+    height: 100px;
+    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+    margin: 20px 0;
 }
