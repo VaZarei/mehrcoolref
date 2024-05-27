@@ -1,8 +1,12 @@
-body {
+
+/***********************************************************    L1_ Navbar     ***********************************************************/
+html, body {
     margin: 0;
-    font-family: Arial, sans-serif ;
-    background-color: #31418c; /* Background color */
     padding: 0;
+    width: 100%;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #f00000; /* Background color */
 }
 
 .navbar-1 {
@@ -10,17 +14,15 @@ body {
     flex-wrap: wrap;
     padding: 20px;
     justify-content: left;
-    background-color: #051456;
-    background-image: url("{% static 'images/base/image.jpg' %}");
+    background-color: #1c214c;
+    background-image: url("static/images/base/ice.jpg");
     background-size: cover;
-    
 }
 
 .navbar-1 .nav-item {
     display: flex;
     align-items: center;
     margin-right: 0px;
-    
 }
 
 .navbar-1 .nav-icon {
@@ -30,14 +32,14 @@ body {
 }
 
 .navbar-1 .nav-text {
-    color: #ffffff;
+    color: #f6f6f6;
     text-decoration: none;
+    font-size: 1.0em;
 }
 
 .navbar-1 .no1-item {
     order: 1;
     margin-left: 20%;
-    
 }
 
 .navbar-1 .no2-item {
@@ -50,30 +52,8 @@ body {
     margin-left: 10px;
 }
 
-/* Responsive adjustments for navbar */
-@media (max-width: 768px) {
-    .navbar-1 {
-        flex-direction: column;
-        align-items: flex-start;
-    }
 
-    .navbar-1 .nav-item {
-        margin-bottom: 10px;
-    }
-}
-
-@media (min-width: 769px) and (max-width: 1024px) {
-    .navbar-1 {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-
-    .navbar-1 .nav-item {
-        margin-right: 15px;
-    }
-}
-
-/* Container for custom columns */
+/***********************************************************    L2_ four columns     ***********************************************************/
 .container {
     display: flex;
     justify-content: space-between; /* Distribute space between columns */
@@ -85,17 +65,17 @@ body {
     color: rgb(0, 0, 0);
     box-sizing: border-box; /* Ensure padding and border are included in the width */
     
+    
 }
 
 .column-1 {
     width: 20%;
-    background-color: #d0d0e2;
+    background-color: #ffffff;
     height: 240px;
     text-align: center;
-    
 }
 
-.logo {
+.llogo {
     width: 60%;
     height: auto;
     
@@ -103,7 +83,7 @@ body {
 
 .column-2 {
     width: 35%;
-    background-color: #d0d0e2;
+    background-color: #ffffff;
     height: 240px;
     display: flex;
     flex-direction: column;
@@ -132,7 +112,7 @@ body {
 
 .column-3 {
     width: 20%;
-    background-color: #d0d0e2;
+    background-color: #ffffff;
     height: 240px;
     display: flex;
     flex-direction: column;
@@ -166,81 +146,79 @@ body {
 
 .column-4 {
     width: 25%;
-    background-color: #d0d0e2;
+    background-color: #ffffff;
     height: 240px;
     text-align: center;
 }
 
 .rlogo {
-    width: 85%;
+    width: 100%;
     height: auto;
     
 }
 
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
 
-    .column {
-        width: 100%; /* Make columns full-width on small screens */
-    }
-}
-
-
-/***************************************************** Menu **********************/
-
-/* static/css/base/basestyles.css */
-
+/***********************************************************    L3_ menu     ***********************************************************/
 
 .navbar {
     background-color: #ffffff;
-    overflow: hidden;
+    padding: 0px;
+    text-align: center; /* Center the text within .navbar */
     
 }
 
 .navbar-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center; /* Center the container horizontally */
     align-items: center;
-    padding: 10px 500px;
-}
-
-.navbar-brand {
-    color: #000000;
-    text-decoration: none;
-    font-size: 1.5em;
 }
 
 .navbar-toggler {
-    display: none;
-    font-size: 1.5em;
-    color: #000000;
-    background: none;
+    background-color: #f7c500;
     border: none;
+    color: #000;
+    font-size: 1.5em;
     cursor: pointer;
 }
 
 .navbar-menu {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: row;
+    margin-top: 20px; /* Optional: Add some space between brand and menu */
 }
 
 .navbar-item {
-    color: #000000;
-    padding: 10px 15px;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    transition: background-color 0.3s, color 0.3s;
+    padding: 10px;
+    transition: background-color 0.3s ease;
+    border-radius: 10px;
 }
 
 .navbar-item:hover {
-    background-color: #f39b1f;
-    color: #000000;
+    background-color: #f1f1e9;
     border-radius: 10px;
 }
+
+
+/***********************************************************    Respose     ***********************************************************/
+
+@media (min-width: 769px) {
+    .navbar-1 {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .navbar-1 .nav-item {
+        margin-right: 15px;
+    }
+
+    .navbar-toggler {
+        display: none;
+    }
+}
+
 
 @media (max-width: 768px) {
     .navbar-menu {
@@ -249,17 +227,41 @@ body {
         width: 100%;
     }
 
-    .navbar-menu.active {
+    .navbar-item {
+        padding: 15px;
+        border-bottom: 1px solid #444;
+    }
+
+    .navbar-item:last-child {
+        border-bottom: none;
+    }
+
+    .navbar-menu.show {
         display: flex;
     }
 
-    .navbar-item {
-        text-align: center;
-        padding: 15px;
-        width: 100%;
+    .container {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .navbar-toggler {
-        display: block;
+    .column-1, .column-2, .column-3, .column-4 {
+        width: 100%;
+        margin: 10px 0;
     }
 }
+
+main {
+    padding: 20px;
+    overflow: auto; /* Ensure the main content can scroll if it exceeds the viewport */
+}
+
+h1 {
+    color: #051456;
+}
+
+p {
+    color: #333;
+}
+
+/***********************************************************    emergency bar     ***********************************************************/

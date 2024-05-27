@@ -1,0 +1,12 @@
+static/css/base/basestyles.css
+static/css/home/homestyles.css
+
+static/images/base/
+static/images/home/
+
+static/js/base/basescript.js
+static/js/home/homescript.js
+
+
+
+this is my base.html "" and this  my basestyles.css ""  and this is my home.html , and this is my homestyles.css ""
