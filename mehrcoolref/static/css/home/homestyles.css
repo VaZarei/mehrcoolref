@@ -145,6 +145,7 @@
     width: 50%;
     height: 500px;
     float: left;
+    overflow-wrap: break-word;
     
     
     
@@ -168,6 +169,151 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+    
+    
+    overflow-wrap:normal; /* Allow long words to break */
+    overflow-y:visible;  /* Enable vertical scroll if needed */
+    
+}
+
+.article-title {
+    margin-bottom: 10px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.article-text {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.0;
+    overflow-wrap: break-word;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .article-container {
+        flex-direction: column;
+    }
+
+    .article-image, .article-content {
+        width: 100%;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/*********************************************************************introduction skills****************************/
+
+
+.container_skills {
+    width: 70%;
+    height: 300px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: left;
+    margin: auto;
+    background-color: #ffffff;
+    
+}
+
+.floor1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 100px;
+}
+
+.left-column, .center-column, .right-column {
+    flex: 1;
+    text-align: left;
+}
+
+.left-column img {
+    max-width: 90%;
+    height: auto;
+}
+
+.center-column {
+    flex: 1;
+    text-align: left;
+}
+
+.right-column {
+    text-decoration:solid;
+    color: #000000;
+    font-weight: bold;
+    text-align: center;
+}
+
+.divider {
+    border-top: solid 10px #030096; /* Set line style, thickness, and color */
+    width: 70%;  /* Set desired length (adjust as needed) */
+    margin: 10px 0; /* Add padding above and below (adjust as needed) */
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  .divider2 {
+    border-top: solid 15px #e1d601; /* Set line style, thickness, and color */
+    width: 100%;  /* Set desired length (adjust as needed) */
+    margin: 10px 0; /* Add padding above and below (adjust as needed) */
+    margin: auto;
+    border-radius: 10px;
+  }
+
+  /*****************************************************below Skills****************************************/
+
+  /* Article container styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+/* Article container styling */
+.article-container2 {
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    max-width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 0px #ffffff;
+    width: 100%;
+    height: 600px;
+    margin: auto;
+    
+    
+    
+    
+}
+
+/* Article image styling */
+.article-image {
+    flex: 1;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
+/* Article content styling */
+.article-content {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
     
 }
 
@@ -199,53 +345,72 @@
     }
 }
 
-/*********************************************************************introduction skills****************************/
 
-
-.container_skills {
-    width: 70%;
-    height: 400px;
-    font-family: Arial, sans-serif;
+/* Article container styling */
+.article-container3 {
     display: flex;
+    flex-direction: row;
+    background-color: #fadbdb;
+    border: 1px solid #ffffff;
+    border-radius: 10px;
+    max-width: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 0px #ffffff;
+    width: 50%;
+    height: 500px;
+    float: right;
+    
+    
+    
+    
+}
+
+/* Article image styling */
+.article-image {
+    flex: 1;
+}
+
+.article-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:scale-down;
+}
+
+/* Article content styling */
+.article-content {
+    flex: 2;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: left;
     
-    margin: auto;
-    background-color: #ffffff;
     
 }
 
-.floor1 {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 50px 0;
-}
-
-.left-column, .center-column, .right-column {
-    flex: 1;
-    text-align: left;
-}
-
-.left-column img {
-    max-width: 80%;
-    height: auto;
-}
-
-.center-column {
-    flex: 1;
-    text-align: left;
-}
-
-.right-column {
-    text-decoration:solid;
-    color: #000000;
+.article-title {
+    margin-bottom: 10px;
+    font-size: 24px;
     font-weight: bold;
-    text-align: center;
 }
 
-.divider {
-    height: 100px;
-    background: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
-    margin: 20px 0;
+.article-text {
+    text-align: justify;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .article-container {
+        flex-direction: column;
+    }
+
+    .article-image, .article-content {
+        width: 100%;
+    }
+
+    .article-image img {
+        width: 100%;
+        height: auto;
+    }
 }
